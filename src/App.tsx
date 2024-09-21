@@ -1,11 +1,15 @@
-import './App.css'
+import "./App.css";
+import Router from "@/lib/system/Router";
+import { CharacterProvider } from "@/components/contexts/CharacterContext";
 
 function App() {
   return (
-    <>
-      <h1>Star wars</h1>
-    </>
-  )
+    <CharacterProvider>
+    <div className="dark container mx-auto px-4">
+      <Router />
+    </div>
+    </CharacterProvider>
+  );
 }
 
-export default App
+export default App;
