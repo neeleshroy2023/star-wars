@@ -8,7 +8,7 @@ const CharacterDetails = () => {
   const { characterId } = useParams<{ characterId: string }>();
   const navigate = useNavigate();
 
-  const { characters } = useContext(CharacterContext);
+  const { characters, updateCharacter } = useContext(CharacterContext);
   const [characterWithFilms, setCharacterWithFilms] =
     useState<ICharacterDetails | null>(null);
 
@@ -44,12 +44,18 @@ const CharacterDetails = () => {
     fetchFilmsOfCharacter();
   }, []);
 
+  const handleUpdateCharacter = (existingCharacter: ICharacterDetails, currentGenderValue: string) => {
+    const updatedCharacter = { ...existingCharacter, gender: currentGenderValue };
+    updateCharacter(updatedCharacter);
+  }
+
   return (
     <CharacterDetailsPresentation
       character={characterWithFilms}
       loading={loading}
       error={error}
       navigate={navigate}
+      handleUpdateCharacter={handleUpdateCharacter}
     />
   );
 };

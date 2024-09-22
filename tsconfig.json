@@ -9,6 +9,9 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vitest", "node"]
+    "types": ["vitest", "node", "vite/client", "cypress"],
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
   }
 }

@@ -6,12 +6,14 @@ import {
   CardDescription,
   CardContent,
 } from "../ui/card";
+import { Input } from "../ui/input";
 
 export interface CharacterDetailsPresentationProps {
   character: any;
   loading: boolean;
   error: boolean;
   navigate: (value: number) => void;
+  handleUpdateCharacter?: (character: any, value: string) => void;
 }
 
 const CharacterDetailsPresentation = ({
@@ -19,6 +21,7 @@ const CharacterDetailsPresentation = ({
   loading,
   error,
   navigate,
+  handleUpdateCharacter
 }: CharacterDetailsPresentationProps) => {
   return (
     <div>
@@ -37,7 +40,11 @@ const CharacterDetailsPresentation = ({
             <CardHeader>
               <CardTitle className="text-xl">{character?.name}</CardTitle>
               <CardDescription>
-                {character?.gender} - {character?.height}cm
+                <p>{character?.gender}</p>
+                <Input type="text" onChange={(e) => {
+                  handleUpdateCharacter?.(character, e.target.value);
+                }}/>
+                <p>{character?.height}cm</p>
               </CardDescription>
             </CardHeader>
             <CardContent>
