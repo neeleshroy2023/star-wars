@@ -30,11 +30,10 @@ const CharacterListPresentation: React.FC<CharacterListPresentationProps> = ({
       )}
       {error && <p>Error fetching characters/planets</p>}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-        {!loading &&
-          !error &&
-          characters &&
+        {characters &&
           characters?.map((character: any) => (
-            <Card className="w-full">
+            <article data-testid="character-card" key={character?.id}>
+              <Card className="w-full">
               <CardHeader>
                 <CardTitle className="text-xl">{character.name}</CardTitle>
                 <CardDescription>
@@ -51,6 +50,8 @@ const CharacterListPresentation: React.FC<CharacterListPresentationProps> = ({
                 </Button>
               </CardFooter>
             </Card>
+            </article>
+            
           ))}
       </div>
     </>

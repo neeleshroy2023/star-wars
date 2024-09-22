@@ -5,9 +5,9 @@ import { CharacterProvider } from "@/components/contexts/CharacterContext";
 function App() {
   return (
     <CharacterProvider>
-    <div className="dark container mx-auto px-4">
-      <Router />
-    </div>
+      <div className="dark container mx-auto px-4">
+        <Router />
+      </div>
     </CharacterProvider>
   );
 }

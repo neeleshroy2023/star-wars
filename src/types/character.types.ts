@@ -15,9 +15,9 @@ export type Character = {
   homeworld: string;
   url?: string;
   planetName?: string;
-  eye_color: string;
-  films: string[] | TFilm[];
-  hair_color: string;
+  eye_color?: string;
+  films?: string[] | TFilm[];
+  hair_color?: string;
 };
 
 export interface ICharacterDetails extends Character {
