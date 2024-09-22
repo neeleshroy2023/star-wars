@@ -1,6 +1,6 @@
 # Star Wars API Explorer
 
-This project is a **Star Wars-themed** web application built using **React**, **TypeScript**, **Vite**, and **Tailwind CSS**, allowing users to explore Star Wars data from a public API.
+This project is a **Star Wars-themed** web application built using **React**, **TypeScript**, **Vite**, and **ShadCn**, allowing users to explore Star Wars data from a public API.
 
 ## Features
 
@@ -68,7 +68,7 @@ For Headless:
 - **Cypress**: Routing framework
 - **TypeScript**: Static typing for JavaScript
 - **Vite**: Build tool for fast development and production bundling
-- **Tailwind CSS**: Utility-first CSS framework
+- **ShadCN**: Utility-first CSS framework
 - **Cypress**: End-to-end testing framework
 
 ## Future Enhancements
