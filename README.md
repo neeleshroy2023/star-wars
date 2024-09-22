@@ -1,50 +1,83 @@
-# React + TypeScript + Vite
+# Star Wars API Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Star Wars-themed** web application built using **React**, **TypeScript**, **Vite**, and **Tailwind CSS**, allowing users to explore Star Wars data from a public API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **API Integration**: Fetch data from the Star Wars API (SWAPI) to display information about Star Wars characters, planets, and starships.
+- **Responsive Design**: The application is fully responsive and optimized for various devices.
+- **Cypress Integration**: End-to-end testing using Cypress.
 
-## Expanding the ESLint configuration
+## Setup and Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/neeleshroy2023/star-wars.git
+   cd star-wars
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. **Install dependencies**:
+   ```bash
+   yarn install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+3. **Run the development server**:
+   ```bash
+   yarn dev
+   ```
+
+4. **Build the project**:
+   ```bash
+   yarn build
+   ```
+
+5. **Run unit tests**:
+   ```bash
+   yarn test
+   ```
+
+5. **Run End to End tests**:
+In One terminal:
+   ```bash
+   yarn dev
+   ```
+Another terminal:
+For chrome:
+```bash
+  yarn cy:open
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+For Headless:
+```bash
+  yarn cy:run
 ```
+
+## Project Structure
+
+- **src/**: Contains the main code of the application.
+  - **components/**: Reusable UI components.
+  - **components/containers**: Container elements containing logic.
+  - **components/presentations**: Presentation elements containing dumb UI
+
+- **cypress/**: Contains Cypress testing configuration and test cases.
+- **public/**: Static assets.
+
+## Technologies Used
+
+- **React**: UI Library
+- **Cypress**: Routing framework
+- **TypeScript**: Static typing for JavaScript
+- **Vite**: Build tool for fast development and production bundling
+- **Tailwind CSS**: Utility-first CSS framework
+- **Cypress**: End-to-end testing framework
+
+## Future Enhancements
+
+- **State Management**: Potential use of a state management library like Redux or Zustand for more complex state handling.
+- **Advanced Testing**: Integration of more unit and integration tests.
+- **Additional API Data**: Extend the API integration to include films, species, and vehicles.
+- **POST Request**: Add a backend and own DB to manage data handling and implement the whole CRUD
+
+---
+
+Neelesh Roy
